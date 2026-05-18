@@ -30,3 +30,22 @@
 - 已实现最小 `StateGraph` Agent。
 - 先不接真实 LLM，用规则模拟路由、工具调用和回答生成。
 - 已覆盖基础测试：普通回答路线、计算路线、异常计算兜底。
+- 已完成 `debugpy` 断点调试，理解 `app.invoke(initial_state)` 如何驱动 state 沿图流动。
+- 已整理 LangGraph 调试命令、断点位置、重点观察字段和总体流程到 `LangGraph_demo/RUN_COMMANDS.md`。
+
+调试时重点观察：
+
+- `question`：用户原始输入。
+- `route`：路由节点写入，条件边读取。
+- `tool_result`：工具节点写入。
+- `answer`：最终回答节点写入。
+
+核心理解：
+
+```text
+build_graph() 定义图结构
+initial_state 提供本次运行的数据
+app.invoke(initial_state) 启动图执行
+Node 返回局部更新
+Edge 根据 state 决定下一步
+```

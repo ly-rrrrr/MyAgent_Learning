@@ -13,6 +13,7 @@ LangGraph_demo/
   simple_agent.py
   test_simple_agent.py
   requirements.txt
+  RUN_COMMANDS.md
   README.md
 ```
 
@@ -111,6 +112,12 @@ route_question
 ```
 
 ## 调试建议
+
+更完整的运行和断点调试命令见：
+
+```text
+LangGraph_demo/RUN_COMMANDS.md
+```
 
 第一遍重点看 `final_state`：
 
