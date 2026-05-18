@@ -6,40 +6,7 @@
 2. `Node`：接收 state，返回 state 的局部更新。
 3. `Edge`：控制节点之间怎么流动，包括普通边和条件边。
 
-## 目录
 
-```text
-LangGraph_demo/
-  simple_agent.py
-  test_simple_agent.py
-  requirements.txt
-  RUN_COMMANDS.md
-  README.md
-```
-
-## 安装依赖
-
-```powershell
-pip install -r requirements.txt
-```
-
-## 运行
-
-```powershell
-python simple_agent.py "请计算 12 * 7"
-```
-
-也可以运行一个不需要工具的问题：
-
-```powershell
-python simple_agent.py "你好，介绍一下 StateGraph"
-```
-
-## 测试
-
-```powershell
-python -m unittest LangGraph_demo.test_simple_agent
-```
 
 ## 代码学习顺序
 
@@ -113,7 +80,7 @@ route_question
 
 ## 调试建议
 
-更完整的运行和断点调试命令见：
+完整的运行和断点调试命令见：
 
 ```text
 LangGraph_demo/RUN_COMMANDS.md
